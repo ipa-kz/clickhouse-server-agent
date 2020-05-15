@@ -11,8 +11,4 @@ WORKDIR /var/lib/zabbix
 
 VOLUME ["/etc/zabbix/zabbix_agentd.d", "/var/lib/zabbix/enc", "/var/lib/zabbix/modules"]
 
-COPY ["docker-entrypoint.sh", "/usr/bin/"]
-
-ENTRYPOINT ["/sbin/tini", "--", "/usr/bin/docker-entrypoint.sh"]
-
 CMD ["/usr/sbin/zabbix_agentd", "--foreground", "-c", "/etc/zabbix/zabbix_agentd.conf"]
