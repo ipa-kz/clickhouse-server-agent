@@ -5,5 +5,5 @@ RUN apt-get update && \
     apt update && \
     apt-get install -y zabbix-agent && \
     apt-get install -y libxml2-utils
-
-CMD ["/usr/sbin/zabbix_agentd", "--foreground", "-c", "/etc/zabbix/zabbix_agentd.conf"]
+    
+EXPOSE 8123 9000 10050
