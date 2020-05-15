@@ -5,7 +5,7 @@ RUN apt-get update && \
     apt update && \
     apt-get install -y zabbix-agent && \
     apt-get install -y libxml2-utils && \
-    mkdir /var/lib/zabbix && \
+    mkdir -m 777 /var/lib/zabbix && \
     apt-get install -y systemd && \
     systemctl enable zabbix-agent
     
