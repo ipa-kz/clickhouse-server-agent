@@ -4,6 +4,9 @@ RUN apt-get update && \
     dpkg -i zabbix-release_4.4-1+bionic_all.deb && \
     apt update && \
     apt-get install -y zabbix-agent && \
-    apt-get install -y libxml2-utils
+    apt-get install -y libxml2-utils && \
+    mkdir /var/lib/zabbix && \
+    apt-get install systemd && \
+    service zabbix-agent enable
     
 EXPOSE 8123 9000 10050
