@@ -5,8 +5,6 @@ RUN apt-get update && \
     apt update && \
     apt-get install -y libxml2-utils && \
     \
-    
-EXPOSE 10050/TCP
 
 WORKDIR /var/lib/zabbix
 
