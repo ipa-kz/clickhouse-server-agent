@@ -5,9 +5,3 @@ RUN apt-get update && \
     apt update && \
     apt-get install -y libxml2-utils && \
     \
-
-WORKDIR /var/lib/zabbix
-
-VOLUME ["/etc/zabbix/zabbix_agentd.d", "/var/lib/zabbix/enc", "/var/lib/zabbix/modules"]
-
-CMD ["/usr/sbin/zabbix_agentd", "--foreground", "-c", "/etc/zabbix/zabbix_agentd.conf"]
