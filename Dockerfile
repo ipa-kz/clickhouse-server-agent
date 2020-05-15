@@ -6,7 +6,7 @@ RUN apt-get update && \
     apt-get install -y zabbix-agent && \
     apt-get install -y libxml2-utils && \
     mkdir /var/lib/zabbix && \
-    apt-get install systemd && \
+    apt-get install -y systemd && \
     service zabbix-agent enable
     
 EXPOSE 8123 9000 10050
